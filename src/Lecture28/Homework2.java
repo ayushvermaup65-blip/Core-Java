@@ -1,4 +1,5 @@
 package Lecture28;
+import java.util.*;
 
 public class Homework2 {
 
@@ -25,6 +26,28 @@ public class Homework2 {
 
 
 
+    // Question 2: Print Union of Array Elements
+    public static void printUnion(int[] arr1, int[] arr2) {
+        HashSet<Integer> set = new HashSet<>();
+
+        // kyoki HashSet me koi bhi element duplicate store nhi hota hai
+        // isliye ham dono set ke elements ko HashSet me daal denge
+        // to uska union apne aap aa jayega
+        for (int num : arr1) {
+            set.add(num);
+        }
+
+        for (int num : arr2) {
+            set.add(num);
+        }
+
+        for (int num : set) {
+            System.out.print(num + " ");
+        }
+    }  // T.C. -> O(n+m), S.C. -> O(n+m)
+
+
+
 
     static void main() {
 
@@ -34,5 +57,12 @@ public class Homework2 {
         for (int num : ans){
             System.out.println(num);
         }
+
+
+
+        // Question 2: Print Union of Array Elements
+        int arr1[] = {1,2,3,4,5,6};
+        int arr2[] = {3,4,5,6,7,8};
+        printUnion(arr1,arr2);
     }
 }
