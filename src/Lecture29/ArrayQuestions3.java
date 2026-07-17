@@ -24,7 +24,25 @@ public class ArrayQuestions3 {
             }
         }
         return arr;
-    }
+    }  // T.C. -> O(n), S.C. -> O(1)
+
+
+
+    // Question 2: Find the missing number from the array
+    static int missingNumber(int[] arr){
+        int xorSum = 0;
+        // XOR with all the array elements
+        for (int n: arr){
+            xorSum = xorSum ^ n;
+        }
+        // XOR with all the element in the range
+        int n = arr.length;
+        for (int i=0; i<=n; i++){
+            xorSum = xorSum ^ i;
+        }
+        // ans ajaega
+        return xorSum;
+    }  // T.C. -> O(n), S.C. -> O(1)
 
 
 
@@ -38,5 +56,11 @@ public class ArrayQuestions3 {
     for (int num : ans){
         System.out.println(num + " ");
     }
+
+
+
+    // Question 2: Find the missing number from the array
+    int arr2[] = {0,1,2,5,4};
+        System.out.println(missingNumber(arr2));
     }
 }
