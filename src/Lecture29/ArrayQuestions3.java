@@ -46,6 +46,17 @@ public class ArrayQuestions3 {
 
 
 
+    //  Question 3: Find the unique element in an Array
+    static int uniqueElement(int[] arr){
+        int ans = 0;
+        for (int n: arr){
+            ans = ans ^ n;
+        }
+        return ans;
+    }  // T.C. -> O(n), S.C. -> O(1)
+
+
+
     static void main() {
 
 
@@ -62,5 +73,11 @@ public class ArrayQuestions3 {
     // Question 2: Find the missing number from the array
     int arr2[] = {0,1,2,5,4};
         System.out.println(missingNumber(arr2));
+
+
+
+        //  Question 3: Find the unique element in an Array
+        int arr3[] = {1,2,3,4,3,2,4};
+        System.out.println(uniqueElement(arr3));
     }
 }
