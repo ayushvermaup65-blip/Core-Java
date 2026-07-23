@@ -112,6 +112,33 @@ public class ArrayQuestions4 {
 
 
 
+    // Question 5: Find Pivot Index -> find the index, whose left side elements sum = right side elements sum.
+     static int pivotIndex(int[] arr){
+        int n = arr.length;
+        int leftSum[] = new int[n];
+        int rightSum[] = new int[n];
+
+        // fill left Sum wala array
+         leftSum[0] = arr[0];
+         for (int i = 1; i<n; i++){
+             leftSum[i] = leftSum[i-1] + arr[i];
+         }
+
+         // fill right sum wala array
+         rightSum[n-1] = arr[n-1];
+         for (int i = n-2; i>=0; i--){
+             rightSum[i] = rightSum[i+1] + arr[i];
+         }
+            // check for equality
+         for (int i=0; i<n; i++){
+             if (leftSum[i] == rightSum[i]){
+                 return i;
+             }
+         }
+         return -1;
+     }  // T.C. -> O(n), S.C. -> O(n)
+
+
     static void main() {
 
 
@@ -136,5 +163,13 @@ public class ArrayQuestions4 {
         // Question 4: Find First Repeating Element
         int arr4[] = {10,5,3,4,3,5,6};
         System.out.println(findFirstRepeatingElement(arr4));
+
+
+        // Question 5: Find Pivot Index -> find the index, whose left side elements sum = right side elements sum.
+        int arr5[] = {1,5,7,3,6,5,6,5};
+        System.out.println(pivotIndex(arr5));
+
+
+
     }
 }
