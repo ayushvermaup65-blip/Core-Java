@@ -94,6 +94,24 @@ public class ArrayQuestions4 {
 
 
 
+    // Question 4: Find First Repeating Element
+    static int findFirstRepeatingElement(int[] arr){
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        // freq store
+        for(int num: arr){
+            freq.put(num, freq.getOrDefault(num, 0)+1);
+        }
+        for(int i: arr){
+            if(freq.get(i) > 1){
+                return i;
+            }
+        }
+        // agar koi bhi freq > 1 nhi hai
+        return -1;
+    }  // T.C. -> O(n), S.C. -> O(n)
+
+
+
     static void main() {
 
 
@@ -113,5 +131,10 @@ public class ArrayQuestions4 {
         // Question 3: Remove Duplicates from Sorted Array
         int arr3[] = {1,2,2,2,2,3,3,4};
         System.out.println(removeDuplicates(arr3));
+
+
+        // Question 4: Find First Repeating Element
+        int arr4[] = {10,5,3,4,3,5,6};
+        System.out.println(findFirstRepeatingElement(arr4));
     }
 }
