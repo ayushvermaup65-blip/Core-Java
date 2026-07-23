@@ -73,6 +73,27 @@ public class ArrayQuestions4 {
 
 
 
+    // Question 3: Remove Duplicates from Sorted Array
+    static int removeDuplicates(int[] arr){
+        int i = 0;
+        int j = 1;
+        int n = arr.length;
+        while(j< n){
+            if (arr[i] == arr[j]){
+                j++;
+            }
+            else{
+                //no match
+                i++;
+                arr[i] = arr[j];
+                j++;
+            }
+        }
+        return i+1;
+    }  // T.C. -> O(n), S.C. -> O(1)
+
+
+
     static void main() {
 
 
@@ -86,5 +107,11 @@ public class ArrayQuestions4 {
         // Question 2: Three Sum -> retun elements those sum is 0
         int arr2[] = {-1,0,1,2,-1,-4};
         System.out.println(threeSum(arr2));
+
+
+
+        // Question 3: Remove Duplicates from Sorted Array
+        int arr3[] = {1,2,2,2,2,3,3,4};
+        System.out.println(removeDuplicates(arr3));
     }
 }
