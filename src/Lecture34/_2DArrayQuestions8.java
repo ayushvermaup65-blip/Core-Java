@@ -38,7 +38,7 @@ public class _2DArrayQuestions8 {
             }
         }
         return arr;
-    }
+    }  // T.C. -> O(n^2), S.C. -> O(1)
 
 
     static void main() {
