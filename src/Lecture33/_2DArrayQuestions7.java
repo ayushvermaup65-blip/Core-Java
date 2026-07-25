@@ -81,7 +81,7 @@ public class _2DArrayQuestions7 {
 
 
 
-    // Question 4: Find Transpose of a Matrix
+    // Question 4: Find Transpose of a Matrix -> ye code tab use karo jab transpose ek naye matrix me chahiye
     static int[][] transpose(int[][] arr){
         if (arr == null || arr.length == 0){
             return new int[0][0];
