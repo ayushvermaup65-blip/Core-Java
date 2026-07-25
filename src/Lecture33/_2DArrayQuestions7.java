@@ -103,7 +103,7 @@ public class _2DArrayQuestions7 {
             }
         }
         return ans;
-    }
+    }  // T.C. -> O(n*m), S.C. -> O(n)
 
 
     static void main() {
