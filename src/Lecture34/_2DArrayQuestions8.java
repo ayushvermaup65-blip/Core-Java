@@ -85,7 +85,7 @@ public class _2DArrayQuestions8 {
                 }
             }
             return result;
-        }
+        }  // T.C. -> O(m*n), S.C. -> O(n)
 
 
 
@@ -102,7 +102,7 @@ public class _2DArrayQuestions8 {
 
 
         // Question 2: Spiral Print of Matrix
-        int arr2[][] = {{1,2,3,4},{5,6,7,8}};
+        int arr2[][] = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
         List<Integer> result = spiralOrder(arr2);
         for(int nums: result){
             System.out.println(nums);
