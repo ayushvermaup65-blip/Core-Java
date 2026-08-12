@@ -2,6 +2,7 @@ package Lecture35;
 
 public class BubbleSort {
     
+    // Bubble Sort me sabse maximum value apni original position pe chali jati hai.
     static int[] bubbleSort(int[]arr){
         int n = arr.length;
         for(int i = 0; i<n-1; i++){
